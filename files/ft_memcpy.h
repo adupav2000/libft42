@@ -1,14 +1,14 @@
-
 #include <string.h>
-
-
 
 void *ft_memcpy(void *destination, const void *source, size_t n)
 {
-    void *retVal;
+    char *retVal;
 
-    retVal = destination;
+    retVal = (char *)destination;
     while(n-- > 0)
-        *desination++ = *source;
+    {
+        retVal = (char *)source;
+        retVal++;
+    }
     return(retVal);
 }

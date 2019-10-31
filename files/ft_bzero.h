@@ -1,8 +1,10 @@
+#include <string.h>
 
-
-
-void bzero(void *s, size_t n)
+void ft_bzero(void *s, size_t n)
 {
+    char *r;
+
+    r = s;
     while(n-- > 0)
-        *s++ = 0;
+        *r++ = 0;
 }

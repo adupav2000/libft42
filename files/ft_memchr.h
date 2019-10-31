@@ -1,6 +1,6 @@
 #include <string.h>
 
-void *memchr(const void *s, int c, size_t n)
+void *ft_memchr(const void *s, int c, size_t n)
 {
     unsigned char to_find;
     unsigned char *to_search;
@@ -8,11 +8,11 @@ void *memchr(const void *s, int c, size_t n)
 
     i = 0;
     to_find = (unsigned char)c;
-    to_search = s;
+    to_search = (unsigned char *)s;
     while(*(to_search + i)&& n - i)
     {
         if(*(to_search + i) == to_find)
-            return (*(to_search + i));
+            return ((to_search + i));
         i++;
     }
     return(0);
