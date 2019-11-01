@@ -3,9 +3,12 @@
 
 void *ft_memmove(void *dst, const void *src, size_t len)
 {
-    char *d = dst;
-    const char *s = src;
+    char *d;
+    char *s;
+
+    d = (char *)dst;
+    s = (char *)src;
     while(len-- > 0)
-        *(dst + len) = *(src + len); 
+        *(d + len) = *(s + len); 
     return (dst);
 }
