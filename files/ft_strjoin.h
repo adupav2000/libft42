@@ -14,4 +14,3 @@ char * ft_strjoin(char const *s1, char const *s2)
 	ret_val = 0;
 	return(ret_val);
 }
-
