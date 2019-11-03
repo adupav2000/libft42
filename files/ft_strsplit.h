@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include "../libft.h"
 
 char ** ft_strsplit(char const *s, char c)
 {
@@ -19,7 +19,7 @@ char ** ft_strsplit(char const *s, char c)
 				i++;
 			i_ret_val_first_col++;
 			ret_val[i_ret_val_first_col] = 0;
-			ret_val[i_ret_val_first_col] = malloc((int)ft_strlenopt(&s[i], c));
+			ret_val[i_ret_val_first_col] = malloc((int)ft_strlenopt((char *)&s[i], c));
 			i_ret_val_sec_col = 0;
 		}
 		ret_val[i_ret_val_first_col][i_ret_val_sec_col++] = s[i++];

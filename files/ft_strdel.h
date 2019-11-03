@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include "../libft.h"
 
 void ft_strdel(char **as)
 {
@@ -6,6 +6,6 @@ void ft_strdel(char **as)
 
     i = 0;
     while(*as[i])
-        free(*as[i++]);
+        free(as[i++]);
     *as = NULL;
 }

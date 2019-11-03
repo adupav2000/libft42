@@ -1,6 +1,7 @@
-#include <string.h>
+#include "../libft.h"
 /*DONT KNOW IF THE SEACH STOPS WHEN I_HAYSTACK OR THE I_NEEDLE IS LONGER THAN*/
 /*THE LEN VALUE PUTTING IT TO HAYSTACK FOR THE MOMENT*/
+
 char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
     int i_haystack;

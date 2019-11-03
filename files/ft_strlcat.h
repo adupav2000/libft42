@@ -1,12 +1,4 @@
-/**
- * @Author: AlainduPavillon
- * @Date:   2019-10-22T19:51:35+02:00
- * @Email:  adupav2000@gmail.com
- * @Last modified by:   AlainduPavillon
- * @Last modified time: 2019-10-23T14:25:54+02:00
- * @License: THIS SOFTWARE IS THE INTELECTUAL PROPRETY OF ALAIN DU PAVILLON
- */
-#include <string.h>
+#include "../libft.h"
 
 size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

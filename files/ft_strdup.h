@@ -1,13 +1,5 @@
-/**
- * @Author: AlainduPavillon
- * @Date:   2019-10-21T17:18:40+02:00
- * @Email:  adupav2000@gmail.com
- * @Last modified by:   AlainduPavillon
- * @Last modified time: 2019-10-23T14:00:58+02:00
- * @License: THIS SOFTWARE IS THE INTELECTUAL PROPRETY OF ALAIN DU PAVILLON
- */
-#include <string.h>
-#include <stdlib.h>
+#include "../libft.h"
+
 char *ft_strdup(const char *s1)
 {
    char *to_allocate;

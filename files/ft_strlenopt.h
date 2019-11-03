@@ -1,5 +1,6 @@
 /*ft_strlenopt givves the possibility to measure the length */
 /*of a string with customized string-ending declared as arg c*/
+#include "../libft.h"
 
 unsigned int ft_strlenopt(char *str, char c)
 {
