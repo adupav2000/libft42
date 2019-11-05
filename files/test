@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 files/ft_atoi.h files/ft_bzero.h files/ft_get_int_char_length.h files/ft_isalnum.h files/ft_isalpha.h files/ft_isascii.h files/ft_isdigit.h files/ft_islower.h files/ft_isprint.h files/ft_isupper.h files/ft_itoa.h files/ft_memalloc.h files/ft_memccpy.h files/ft_memchr.h files/ft_memcmp.h files/ft_memcpy.h files/ft_memdel.h files/ft_memmove.h files/ft_memset.h files/ft_strcat.h files/ft_strchr.h files/ft_strclr.h files/ft_strcmp.h files/ft_strcpy.h files/ft_strdel.h files/ft_strdup.h files/ft_strequ.h files/ft_striter.h files/ft_striteri.h files/ft_strjoin.h files/ft_strlcat.h files/ft_strlen.h files/ft_strlenopt.h files/ft_strmap.h files/ft_strmapi.h files/ft_strncat.h files/ft_strncmp.h files/ft_strncpy.h files/ft_strnequ.h files/ft_strnew.h files/ft_strnlen.h files/ft_strnstr.h files/ft_strrchr.h files/ft_strsplit.h files/ft_strstr.h files/ft_strsub.h files/ft_strtrim.h files/ft_tolower.h files/ft_toupper.h
 
+=======
+ft_atoi.h, ft_bzero.h, ft_ft_memdel.h, ft_get_int_char_length.h, ft_isalnum.h, ft_isalpha.h, ft_isascii.h, ft_isdigit.h, ft_islower.h, ft_isprint.h, ft_isupper.h, ft_itoa.h, ft_memalloc.h, ft_memccpy.c, ft_memccpy.h, ft_memchr.h, ft_memcmp.h, ft_memcpy.h, ft_memdel.h, ft_memmove.c, ft_memmove.h, ft_memset.h, ft_putchar.h, ft_putchar_fd.h, ft_putendl.h, ft_putendl_fd.h, ft_putstr.h, ft_putstr_fd.h, ft_strcat.h, ft_strchr.h, ft_strclr.h, ft_strcmp.h, ft_strcpy.h, ft_strdel.h, ft_strdup.h, ft_strequ.h, ft_striter.h, ft_striteri.h, ft_strjoin.h, ft_strlcat.h, ft_strlen.h, ft_strlenopt.h, ft_strmap.h, ft_strmapi.h, ft_strncat.h, ft_strncmp.h, ft_strncpy.h, ft_strnequ.h, ft_strnew.h, ft_strnlen.h, ft_strnstr.h, ft_strrchr.h, ft_strsplit.h, ft_strstr.h, ft_strsub.h, ft_strtrim.h, ft_tolower.h, ft_toupper.h
+
+ft_atoi.o, ft_bzero.o, ft_ft_memdel.o, ft_get_int_char_length.o, ft_isalnum.o, ft_isalpha.o, ft_isascii.o, ft_isdigit.o, ft_islower.o, ft_isprint.o, ft_isupper.o, ft_itoa.o, ft_memalloc.o, ft_memccpy.o, ft_memccpy.o, ft_memchr.o, ft_memcmp.o, ft_memcpy.o, ft_memdel.o, ft_memmove.o, ft_memmove.o, ft_memset.o, ft_putchar.o, ft_putchar_fd.o, ft_putendl.o, ft_putendl_fd.o, ft_putstr.o, ft_putstr_fd.o, ft_strcat.o, ft_strchr.o, ft_strclr.o, ft_strcmp.o, ft_strcpy.o, ft_strdel.o, ft_strdup.o, ft_strequ.o, ft_striter.o, ft_striteri.o, ft_strjoin.o, ft_strlcat.o, ft_strlen.o, ft_strlenopt.o, ft_strmap.o, ft_strmapi.o, ft_strncat.o, ft_strncmp.o, ft_strncpy.o, ft_strnequ.o, ft_strnew.o, ft_strnlen.o, ft_strnstr.o, ft_strrchr.o, ft_strsplit.o, ft_strstr.o, ft_strsub.o, ft_strtrim.o, ft_tolower.o, ft_toupper.o
+>>>>>>> 589891a153a26dcb8e8110be117d06ffefa50199
 
 
 
 
+<<<<<<< HEAD
 
 files/ft_atoi.o files/ft_bzero.o files/ft_get_int_char_length.o \
 			files/ft_isalnum.o files/ft_isalpha.o files/ft_isascii.o \
@@ -34,3 +41,18 @@ files/ft_strmap.h files/ft_strmapi.h files/ft_strncat.h files/ft_strncmp.h \
 files/ft_strncpy.h files/ft_strnequ.h files/ft_strnew.h files/ft_strnlen.h \
 files/ft_strnstr.h files/ft_strrchr.h files/ft_strsplit.h files/ft_strstr.h \
 files/ft_strsub.h files/ft_strtrim.h files/ft_tolower.h files/ft_toupper.h
+=======
+ft_atoi.o ft_bzero.o ft_ft_memdel.o ft_get_int_char_length.oft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.oft_islower.o ft_isprint.o ft_isupper.o ft_itoa.o ft_memalloc.o\
+			 ft_memccpy.c ft_memccpy.o ft_memchr.o ft_memcmp.o ft_memcpy.o\
+			 ft_memdel.o ft_memmove.c ft_memmove.o ft_memset.o ft_putchar.o\
+			 ft_putchar_fd.o ft_putendl.o ft_putendl_fd.o ft_putstr.o\
+			 ft_putstr_fd.o ft_strcat.o ft_strchr.o ft_strclr.o\
+			 ft_strcmp.o ft_strcpy.o ft_strdel.o ft_strdup.o ft_strequ.o\
+			 ft_striter.o ft_striteri.o ft_strjoin.o ft_strlcat.o ft_strlen.o\
+			 ft_strlenopt.o ft_strmap.o ft_strmapi.o ft_strncat.o ft_strncmp.o\
+			 ft_strncpy.o ft_strnequ.o ft_strnew.o ft_strnlen.o ft_strnstr.o\
+			 ft_strrchr.o ft_strsplit.o ft_strstr.o ft_strsub.o ft_strtrim.o\
+			 ft_tolower.o ft_toupper.o 
+
+ files/ft_atoi.h files/ft_bzero.h files/ft_ft_memdel.h files/ft_get_int_char_length.h files/ft_isalnum.h files/ft_isalpha.h files/ft_isascii.h files/ft_isdigit.h files/ft_islower.h files/ft_isprint.h files/ft_isupper.h files/ft_itoa.h files/ft_memalloc.h files/ft_memccpy.h files/ft_memchr.h files/ft_memcmp.h files/ft_memcpy.h files/ft_memdel.h files/ft_memmove.h files/ft_memset.h files/ft_putchar.h files/ft_putchar_fd.h files/ft_putendl.h files/ft_putendl_fd.h files/ft_putstr.h files/ft_putstr_fd.h files/ft_strcat.h files/ft_strchr.h files/ft_strclr.h files/ft_strcmp.h files/ft_strcpy.h files/ft_strdel.h files/ft_strdup.h files/ft_strequ.h files/ft_striter.h files/ft_striteri.h files/ft_strjoin.h files/ft_strlcat.h files/ft_strlen.h files/ft_strlenopt.h files/ft_strmap.h files/ft_strmapi.h files/ft_strncat.h files/ft_strncmp.h files/ft_strncpy.h files/ft_strnequ.h files/ft_strnew.h files/ft_strnlen.h files/ft_strnstr.h files/ft_strrchr.h files/ft_strsplit.h files/ft_strstr.h files/ft_strsub.h files/ft_strtrim.h files/ft_tolower.h files/ft_toupper.h
+>>>>>>> 589891a153a26dcb8e8110be117d06ffefa50199

@@ -1,4 +1,4 @@
-# ifndef LIBFT_H
+#ifndef LIBFT_H
 #define LIBFT_H
 #include <string.h>
 #include <stdlib.h>
@@ -50,5 +50,16 @@ char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strtrim(char const * s);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
+void 			ft_putchar(char c);
+void 			ft_putchar_fd(char c, int fd);
+void 			ft_putendl(char const *s);
+void 			ft_putendl(char const *s);
+void 			ft_putstr(char const *s);
+void 			ft_putstr_fd(char const *s, int fd);
+
+
+
+
+
 
 #endif
