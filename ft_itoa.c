@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/04 11:10:09 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/04 12:08:26 by adu-pavi         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 
 char* ft_itoa(int n)
@@ -25,6 +13,7 @@ char* ft_itoa(int n)
 	diviseur = 1000000000;
 	positivity = 1;
 	i_ret_val = 0;
+	ret_val = 0;
 	if (n < 0)
 	{
 		positivity = -1;
@@ -32,15 +21,30 @@ char* ft_itoa(int n)
 	}
 	while(n > 0)
 	{
+		printf("1.moment_val --> %d\n", moment_val);
+		printf("1.n --> %d\n", n);
+		printf("1.diviseur --> %d\n", diviseur);
+		printf("1.n/diviseur --> %d\n", n/diviseur);
 		moment_val = n/diviseur;
 		if (moment_val > 0 || valid_null == 1)
 		{
+			ft_putstr(ret_val);
+			printf("i_ret_val   {%d}\n", i_ret_val);
+			printf("moment_val{%d}\n", moment_val);
 			if (valid_null == 0)
-				if (!(ret_val = malloc(ft_get_int_char_length(n))))
+			{
+				if (!(ret_val = (char *)malloc(ft_get_int_char_length(n))))
+				{
 					return (0);
+				}
+			}
 			valid_null = 1;
-			ret_val[i_ret_val++] = (moment_val * positivity) - 48;
+			
+			*(ret_val + i_ret_val++) = (char)((moment_val * positivity));
 		}
+		printf("2.moment_val --> %d\n", moment_val);
+		printf("2.n --> %d\n", n);
+		printf("2.diviseur --> %d\n", diviseur);
 		n -= (moment_val * diviseur * positivity);
 		moment_val = 0;
 		diviseur = diviseur / 10;

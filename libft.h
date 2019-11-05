@@ -4,6 +4,13 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+typedef struct	s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}				t_list;
+
 int				ft_atoi(const char *str);
 void 			ft_bzero(void *s, size_t n);
 unsigned int	ft_get_int_char_length(int  i);
@@ -56,7 +63,7 @@ void 			ft_putendl(char const *s);
 void 			ft_putendl(char const *s);
 void 			ft_putstr(char const *s);
 void 			ft_putstr_fd(char const *s, int fd);
-
+unsigned int 	ft_str_count_opt(char *str, char c);
 
 
 
