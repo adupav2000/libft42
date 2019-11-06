@@ -62,14 +62,10 @@ int main(int argc, char **argv)
     return (0);
   (void)argv;
   (void)argc;
-  char **ret;
+  // char **ret;
+  // int i = 0;
 
-  ret = ft_strsplit(argv[1], *argv[2]);
-  // printf("%d\n", ft_atoi(*(argv + 1)));
-  // printf("%d\n", atoi(*(argv + 1)));
-
-  printf("%s\n", ret[1]);
-  
-  
+  printf("%s xxx\n", ft_itoa(123321321));
+  // printf("%d xxx\n", ft_get_int_char_length(12312321));
   return (0);
 }

@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/11/06 09:03:33 by adu-pavi          #+#    #+#             */
+/*   Updated: 2019/11/06 09:35:45 by adu-pavi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int ft_atoi(const char *str)
 {
-    long int safety_ret_val;
-    int i;
-    int pos;
+    long    int safety_ret_val;
+    int         i;
+    int         pos;
 
     pos = 1;
     i = 0;
@@ -24,4 +36,3 @@ int ft_atoi(const char *str)
     }
     return  ((int)safety_ret_val * pos);
 }
-

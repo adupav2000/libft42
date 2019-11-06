@@ -12,33 +12,31 @@
 
 #include "libft.h"
 
-unsigned int ft_get_int_char_length(int  i)
+unsigned	int	ft_get_int_char_length(int i)
 {
-	long int s;
-	int ret_val;
-	int denum;
-	unsigned int diviseur;
-	unsigned int rep;
+	long	int			s;
+	int					ret_val;
+	int					denum;
+	unsigned	int		diviseur;
 
 	denum = 10;
 	ret_val = 0;
 	diviseur = 1000000000;
-	rep = 0;
 	s = (long int)i;
 	if (s < 0)
 	{
 		ret_val++;
 		s *= -1;
 	}
-	while(!rep)
+	while (!ret_val)
 	{
-		if (!(s = s/diviseur))
+		if (s == (s % diviseur))
 		{
 			diviseur = diviseur / 10;
 			denum--;
 		}
 		else
-			ret_val += denum;
+			ret_val = denum;
 	}
 	return (ret_val);
 }
