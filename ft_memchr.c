@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/04 11:10:09 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/04 12:08:36 by adu-pavi         ###   ########.fr       */
+/*   Created: 2019/11/06 19:31:22 by AlainduPavi       #+#    #+#             */
+/*   Updated: 2019/11/06 19:33:27 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,3 @@ void *ft_memchr(const void *s, int c, size_t n)
     }
     return(0);
 }
-
-

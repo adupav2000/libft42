@@ -65,6 +65,8 @@ void 			ft_putstr(char const *s);
 void 			ft_putstr_fd(char const *s, int fd);
 unsigned int 	ft_str_count_opt(char *str, char c);
 
+void ft_lstdel(t_list **alst, void(*del)(void*, size_t));
+
 
 
 

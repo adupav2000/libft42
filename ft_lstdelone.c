@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_islower.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/06 14:57:15 by AlainduPavi       #+#    #+#             */
-/*   Updated: 2019/11/06 19:33:20 by adu-pavi         ###   ########.fr       */
+/*   Created: 2019/11/06 19:39:03 by adu-pavi          #+#    #+#             */
+/*   Updated: 2019/11/07 00:13:40 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_islower(int c)
+void ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
 {
-	if(c >= 'a' && c <= 'z')
-		return (1);
-	return (0);
+        (del)(*alst->content, *alst->content_size);
+        free(*alst->content);
 }
