@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_islower.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/06 14:57:15 by AlainduPavi       #+#    #+#             */
-/*   Updated: 2019/11/07 15:00:21 by adu-pavi         ###   ########.fr       */
+/*   Created: 2019/11/04 12:12:45 by adu-pavi          #+#    #+#             */
+/*   Updated: 2019/11/04 12:12:46 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_islower(int c)
+int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	if (c >= 'a' && c <= 'z')
-		return (1);
-	return (0);
+    int ret_val;
+    int prog;
+
+    prog = 0;
+    ret_val = 0;
+    while(s1[prog] == s2[prog] && s1[prog] && n--)
+        prog++;
+    ret_val = (int)(s1[prog] - s2[prog]); 
+    return (ret_val);
+    
 }

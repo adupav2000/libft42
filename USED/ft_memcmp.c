@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_islower.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/06 14:57:15 by AlainduPavi       #+#    #+#             */
-/*   Updated: 2019/11/07 15:00:21 by adu-pavi         ###   ########.fr       */
+/*   Created: 2019/11/04 11:10:09 by adu-pavi          #+#    #+#             */
+/*   Updated: 2019/11/04 12:08:40 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_islower(int c)
+int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	if (c >= 'a' && c <= 'z')
-		return (1);
-	return (0);
+    int i;
+
+    i = 0;
+    while(n - i)
+        if ((int)(s1 + i) != (int)(s2 + i))
+            return ((int)((s1+i)- (s1+i)));
+    return (0);
+                    
 }

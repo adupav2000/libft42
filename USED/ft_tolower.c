@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_islower.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/06 14:57:15 by AlainduPavi       #+#    #+#             */
-/*   Updated: 2019/11/07 15:00:21 by adu-pavi         ###   ########.fr       */
+/*   Created: 2019/11/04 12:15:53 by adu-pavi          #+#    #+#             */
+/*   Updated: 2019/11/04 12:15:57 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_islower(int c)
+int ft_tolower(int c)
 {
-	if (c >= 'a' && c <= 'z')
-		return (1);
-	return (0);
+    if(ft_isupper(c))
+        return (c + ('a' - 'A'));
+    return (c);
+
 }

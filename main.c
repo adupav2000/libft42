@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "ft_occure_in_set.c"
 #include "ft_atoi.c"
 #include "ft_islower.c"
 #include "ft_memcmp.c"
@@ -56,6 +57,7 @@
 #include "ft_strrchr.c"
 #include "ft_str_count_opt.c"
 
+
 int main(int argc, char **argv)
 {
   if (argc < 2)
@@ -65,7 +67,8 @@ int main(int argc, char **argv)
   // char **ret;
   // int i = 0;
 
-  printf("%s xxx\n", ft_itoa(123321321));
+  // printf("%s \n", ft_itoa(-123321321));
   // printf("%d xxx\n", ft_get_int_char_length(12312321));
+  printf("%s\n", ft_strtrim("asda sd ua sd", "a sd"));
   return (0);
 }

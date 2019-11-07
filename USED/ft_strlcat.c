@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_islower.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/06 14:57:15 by AlainduPavi       #+#    #+#             */
-/*   Updated: 2019/11/07 15:00:21 by adu-pavi         ###   ########.fr       */
+/*   Created: 2019/11/04 11:53:22 by adu-pavi          #+#    #+#             */
+/*   Updated: 2019/11/04 12:11:50 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_islower(int c)
+size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	if (c >= 'a' && c <= 'z')
-		return (1);
-	return (0);
+    size_t max_con;
+    size_t len_dst;
+    size_t ret_val;
+
+    len_dst = ft_strlen(dst);
+    max_con = (dstsize - ft_strlen(dst) - 1);
+    if(max_con <= 0)
+        return ft_strlen(dst);
+    dst[len_dst + max_con] = '\0';
+    ret_val = len_dst + max_con;  
+    while(--max_con)
+        dst[len_dst + max_con] = src[max_con];
+   return (ret_val); 
 }

@@ -54,7 +54,7 @@ char			*strrchr(const char *s, int c);
 char			**ft_strsplit(char const *s, char c);
 char			*ft_strstr(const char *haystack, const char *needle);
 char			*ft_strsub(char const *s, unsigned int start, size_t len);
-char			*ft_strtrim(char const * s);
+char 			*ft_strtrim(char const *s1, char const *set);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
 void 			ft_putchar(char c);
@@ -64,11 +64,7 @@ void 			ft_putendl(char const *s);
 void 			ft_putstr(char const *s);
 void 			ft_putstr_fd(char const *s, int fd);
 unsigned int 	ft_str_count_opt(char *str, char c);
-
-void ft_lstdel(t_list **alst, void(*del)(void*, size_t));
-
-
-
-
+int				ft_occures_in_set(char c, char const *set);
+void			ft_lstdel(t_list **alst, void(*del)(void*, size_t));
 
 #endif
