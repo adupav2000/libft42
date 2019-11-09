@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_occure_in_set.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/04 11:53:22 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/08 13:02:41 by adu-pavi         ###   ########.fr       */
+/*   Created: 2019/11/07 16:25:11 by adu-pavi          #+#    #+#             */
+/*   Updated: 2019/11/07 16:49:43 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
+/*returns if an element occures in a string*/
+/*, if it does it returns the point at wich it was found in the string*/
+/* this will only reflect the first occurence of it*/
+/*returns -1 if not found*/
+int ft_occures_in_set(char c, char const *set)
 {
-    size_t max_con;
-    size_t len_dst;
-    size_t ret_val;
+	int i;
 
-    len_dst = ft_strlen(dst);
-    max_con = (dstsize - ft_strlen(dst) - 1);
-    if(max_con <= 0)
-        return ft_strlen(dst);
-    dst[len_dst + max_con] = '\0';
-    ret_val = len_dst + max_con;  
-    while(--max_con)
-        dst[len_dst + max_con] = src[max_con];
-   return (ret_val); 
+	i = 0;
+	while(*(set + i) && *(set + i) != c)
+		i++;
+	if (!*(set + i))
+		return (-1);
+	else
+		return (i);
 }
