@@ -6,7 +6,7 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 11:10:09 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/04 12:08:50 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/11/11 22:22:13 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,19 @@
 
 void *ft_memmove(void *dst, const void *src, size_t len)
 {
-    char *d;
-    char *s;
+    unsigned    char    *d;
+    unsigned    char    *s;
+    unsigned    int     i;
 
-    d = (char *)dst;
-    s = (char *)src;
-    while(len-- > 0)
-        *(d + len) = *(s + len); 
+    d = (unsigned char *)dst;
+    s = (unsigned char *)src;
+    i = 0;
+    if (dst == src || !len)
+        return (dst);
+    if (s > d)
+        while ((len + i) >= 0)
+            d[len - i] = s[len - i];
+    while (len-- > 0)
+        *(d++) = *(s++); 
     return (dst);
 }

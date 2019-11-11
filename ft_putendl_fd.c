@@ -6,14 +6,14 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 19:34:00 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/06 19:34:00 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/11/11 13:38:11 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl_fd(char const *s)
+void ft_putendl_fd(char *s, int fd)
 {
-	ft_putstr(s);
-	ft_putchar('\n');
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/06 19:33:31 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/06 19:38:10 by adu-pavi         ###   ########.fr       */
+/*   Created: 2019/11/09 13:09:58 by adu-pavi          #+#    #+#             */
+/*   Updated: 2019/11/09 13:50:12 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 void ft_lstadd_front(t_list **alst, t_list *new)
 {
-    t_list ret_val;
-
-    ret_val = 
+    if (alst && new)
+    {
+        new->next = *alst;
+        *alst = new;
+    }
 }

@@ -6,7 +6,7 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 11:53:22 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/04 12:11:50 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/11/11 23:22:00 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-    size_t max_con;
-    size_t len_dst;
-    size_t ret_val;
+    size_t i;
+    size_t len_dest;
 
-    len_dst = ft_strlen(dst);
-    max_con = (dstsize - ft_strlen(dst) - 1);
-    if(max_con <= 0)
-        return ft_strlen(dst);
-    dst[len_dst + max_con] = '\0';
-    ret_val = len_dst + max_con;  
-    while(--max_con)
-        dst[len_dst + max_con] = src[max_con];
-   return (ret_val); 
+    if (dstsize > ft_strlen(src))
+        dstsize = ft_strlen(src) + 1;
+    i = 0;
+    len_dest = ft_strlen(dst);
+    while(dstsize--)
+    {
+        dst[len_dest + i] = src[i];
+        i++;
+    }
+    return (len_dest);
 }

@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/04 12:03:13 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/11 22:07:11 by adu-pavi         ###   ########.fr       */
+/*   Created: 2019/11/08 14:13:58 by adu-pavi          #+#    #+#             */
+/*   Updated: 2019/11/11 19:30:29 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-  unsigned int i;
+    char *ret_val;
+    
+    if (ft_strlen(s) < start || !(ret_val = (char *)malloc(len + 1)))
+        return (NULL);
+    ft_strlcpy(ret_val, (s + start), len);
 
-  i = 0;
-  while(*(s + i))
-    if (*(s + i++) == (char)c)
-      return ((char *)(s + --i));
-  if (*(s + i) == (char)c)
-    return ((char *)(s + i));
-  
-  return (NULL);
+    return (ret_val);
 }

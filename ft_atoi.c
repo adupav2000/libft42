@@ -6,7 +6,7 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 09:03:33 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/07 14:52:42 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/11/11 15:33:52 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 int ft_atoi(const char *str)
 {
-    long    int safety_ret_val;
+    long long int safety_ret_val;
     int         i;
     int         pos;
 
     pos = 1;
     i = 0;
     safety_ret_val = 0;
-    while(str[i] == ' ')
+    while(str[i] == (' ' | '\n' | '\t'))
         i++;
     if(str[i] == '-' || str[i] == '+')
         if(str[i++] == '-')

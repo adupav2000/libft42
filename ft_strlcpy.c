@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/04 12:03:13 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/11 22:07:11 by adu-pavi         ###   ########.fr       */
+/*   Created: 2019/11/08 13:05:42 by adu-pavi          #+#    #+#             */
+/*   Updated: 2019/11/11 22:40:32 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-  unsigned int i;
+    size_t dst_len;
+    unsigned int i;
 
-  i = 0;
-  while(*(s + i))
-    if (*(s + i++) == (char)c)
-      return ((char *)(s + --i));
-  if (*(s + i) == (char)c)
-    return ((char *)(s + i));
-  
-  return (NULL);
+    if (dstsize <= 0)
+        return (ft_strlen(src));
+    i = 0;
+    dst_len =
+        (ft_strlen(src)) > dstsize ? dstsize : (ft_strlen(src));
+    *(dst + dst_len) = 0;
+    ft_memcpy(dst, src, dst_len);
+    return (dst_len);
 }

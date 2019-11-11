@@ -6,13 +6,13 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 11:53:22 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/04 12:14:08 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/11/11 15:36:36 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *strrchr(const char *s, int c)
+char *ft_strrchr(const char *s, int c)
 {
   int end_s;
 

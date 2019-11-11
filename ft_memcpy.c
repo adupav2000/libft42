@@ -6,7 +6,7 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 11:10:09 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/04 12:08:44 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/11/11 19:33:26 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 
 void *ft_memcpy(void *destination, const void *source, size_t n)
 {
-    char *retVal;
-
-    retVal = (char *)destination;
-    while(n-- > 0)
-    {
-        retVal = (char *)source;
-        retVal++;
-    }
-    return(retVal);
+    char *str1;
+    char *str2;
+    
+    if (!n || source == destination)
+        return (destination);
+    str1 = (char *)destination;
+    str2 = (char *)source;
+    while(n--)
+        *(str1++) = *(str2++);
+    return(destination);
 }

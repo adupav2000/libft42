@@ -6,7 +6,7 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 12:12:19 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/04 12:12:30 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/11/11 19:01:08 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,11 @@ char * ft_strmapi(char const *s, char (*f)(unsigned int, char))
     i = 0;
     while(s[i])
     {
-        s1[i] = (char)malloc(1);
+        if (!(s1[i] = (char)malloc(sizeof((*f)(i, s1[i])) + 1)))
+            return (NULL);
         s1[i] = (*f)(i, s1[i]);
         i++;
     }
+    s1[i] = 0;
     return (s1);
 }

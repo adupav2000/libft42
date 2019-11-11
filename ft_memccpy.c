@@ -6,7 +6,7 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 11:10:09 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/04 12:08:32 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/11/11 20:05:40 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,19 @@
 
 void *ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-    int i;
-    int i2;
-    char *ret_val;
-    char *dest_1;
+    size_t i;
+    unsigned char *destination;
+    unsigned char *source;
 
-    dest_1 = (char *)dst;
-    ret_val = NULL;
     i = 0;
-    while(n-- > 0)
+    destination = (unsigned char *)dst;
+    source = (unsigned char *)src;
+    while (n > i)
     {
-        *(dest_1 + i) = (char)(src + i);
-        i2 = i;
-        while(i2 > 0)
-            if(*(dest_1 + i2++) == ((char)(src + i) || (char)(c))) 
-                return ((dest_1 + i));
+        destination[i] = source[i];
+        if (source[i] == (unsigned char)c)
+            return ((void *)(src + ++i));
         i++;
     }
-    return (ret_val);
+    return (NULL);
 }

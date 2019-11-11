@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 09:09:47 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/06 09:20:32 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/11/09 12:25:51 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char ** ft_strsplit(char const *s, char c)
+char ** ft_split(char const *s, char c)
 {
 	char **ret_val;
 	unsigned int i;

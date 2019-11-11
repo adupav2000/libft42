@@ -6,7 +6,7 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 12:12:45 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/04 12:12:46 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/11/11 22:30:27 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
     ret_val = 0;
     while(s1[prog] == s2[prog] && s1[prog] && n--)
         prog++;
-    ret_val = (int)(s1[prog] - s2[prog]); 
+    ret_val = ((int)((unsigned char)s1[prog] - (unsigned char)s2[prog])); 
     return (ret_val);
-    
 }

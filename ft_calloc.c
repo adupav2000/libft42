@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/04 12:03:13 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/11 22:07:11 by adu-pavi         ###   ########.fr       */
+/*   Created: 2019/11/08 13:56:12 by adu-pavi          #+#    #+#             */
+/*   Updated: 2019/11/11 18:50:50 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+void *ft_calloc(size_t count, size_t size)
 {
-  unsigned int i;
+    void *ret_val;
 
-  i = 0;
-  while(*(s + i))
-    if (*(s + i++) == (char)c)
-      return ((char *)(s + --i));
-  if (*(s + i) == (char)c)
-    return ((char *)(s + i));
-  
-  return (NULL);
+    count = count <= 0 ? 1 : count;
+    size = size <= 0 ? 1 : size;
+    ret_val = 0;
+    if (!(ret_val = malloc(size * count)))
+        return (NULL);
+    ft_bzero(ret_val, size);
+    return (ret_val);
 }
