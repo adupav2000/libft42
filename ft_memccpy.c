@@ -6,7 +6,7 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 11:10:09 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/11 20:05:40 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/11/16 11:31:16 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,29 @@
 
 void *ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-    size_t i;
-    unsigned char *destination;
-    unsigned char *source;
+    // unsigned int		i;
 
+	// i = 0;
+	// while (i < n)
+	// {
+	// 	((unsigned char *)dst)[i] = ((unsigned char*)src)[i];
+	// 	if (((unsigned char*)src)[i] == (unsigned char)c)
+	// 		return (&((unsigned char *)dst)[i + 1]);
+	// 	i += 1;
+	// }
+	// return (NULL);
+
+
+
+
+    size_t i;
+    
     i = 0;
-    destination = (unsigned char *)dst;
-    source = (unsigned char *)src;
     while (n > i)
     {
-        destination[i] = source[i];
-        if (source[i] == (unsigned char)c)
-            return ((void *)(src + ++i));
+        ((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+        if (((unsigned char *)src)[i] == (unsigned char)c)
+            return (&((unsigned char *)dst)[i + 1]);
         i++;
     }
     return (NULL);
