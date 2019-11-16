@@ -6,7 +6,7 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 13:05:42 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/12 11:13:22 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/11/16 16:52:00 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {    
-    	int		i;
+    int		i;
 
 	i = 0;
 	while (--dstsize && src[i])

@@ -6,7 +6,7 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 18:53:40 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/14 21:38:04 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/11/16 18:59:23 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include "../download_func/ft_itoa.c" 
 #include "ft_atoi.c" 
 #include "ft_bzero.c" 
 #include "ft_calloc.c" 
@@ -66,10 +65,12 @@ int main(int argc, char **argv)
 
 
 
-    int test_1 = 1234567;
-    char buffer[10];
-    printf("'%d' -> '%s'\n", test_1, ft_itoa(test_1));
-    printf("'%d' -> '%s'\n", test_1, buffer);
+    // int test_1 = 1234567;
+    char buffer[10] = "azerty";
+    char buffer1[10] = "qsdfg";
+    char *x = ft_strjoin(buffer, buffer1);
+    printf("'%s'\n", x);
+
 
 
 
