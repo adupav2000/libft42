@@ -6,7 +6,7 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 16:25:11 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/07 16:49:43 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/11/19 15:05:36 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /*, if it does it returns the point at wich it was found in the string*/
 /* this will only reflect the first occurence of it*/
 /*returns -1 if not found*/
-int ft_occures_in_set(char c, char const *set)
+int	ft_occures_in_set(char c, char const *set)
 {
 	int i;
 

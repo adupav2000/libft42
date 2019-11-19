@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strlenstropt.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/19 15:29:11 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/19 15:29:25 by adu-pavi         ###   ########.fr       */
+/*   Created: 2019/11/17 20:24:08 by adu-pavi          #+#    #+#             */
+/*   Updated: 2019/11/18 22:27:50 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnew(size_t size)
+size_t ft_strlenstropt(const char *str, const char *set)
 {
-	char	*str;
+    size_t          ret_val;
+    unsigned    int i;
 
-	if (!(str = (char *)malloc(sizeof(char) * size + 1)))
-		return (NULL);
-	str[size] = '\0';
-	while (size--)
-		str[size] = '\0';
-	return (str);
+    i = 1;
+    ret_val = ft_strlenopt(str, *set);
+    while (*(set + i))
+    {
+        if (ret_val > ft_strlenopt(str, *(set + i)))
+            ret_val = ft_strlenopt(str, *(set + i));
+        i++;
+    }
+    return (ret_val);
 }

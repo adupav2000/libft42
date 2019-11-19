@@ -6,7 +6,7 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 09:09:47 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/09 12:25:51 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/11/19 15:53:53 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ char ** ft_split(char const *s, char c)
 				i++;
 			i_f_col++;
 			ret_val[i_f_col] = 0;
+			printf("%s\n", (char *)&s[i]);
 			ret_val[i_f_col] = (char *)malloc((int)ft_strlenopt((char *)&s[i], c));
 			i_s_col = 0;
 		}
-		ret_val[i_f_col][i_s_col] = (char)malloc(sizeof(char));;
-		ret_val[i_f_col][i_s_col++] = s[i++];	
+		ret_val[i_f_col][i_s_col++] = s[i++];
 	}
 	ret_val[++i_f_col] = NULL;
 	return(ret_val);

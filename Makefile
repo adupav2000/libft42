@@ -6,7 +6,7 @@
 #    By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/07 17:38:21 by adu-pavi          #+#    #+#              #
-#    Updated: 2019/11/14 19:42:35 by adu-pavi         ###   ########.fr        #
+#    Updated: 2019/11/19 15:31:29 by adu-pavi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_get_int_char_length.c\
 	ft_putnbr_fd.c ft_putstr_fd.c ft_split.c ft_str_count_opt.c ft_strchr.c\
 	ft_strdup.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_strlen.c\
 	ft_strlenopt.c ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c\
-	ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c ft_isspace.c
+	ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c ft_isspace.c\
+	ft_strlenstropt.c ft_strnew.c
 
 OBJ = $(subst .c,.o,$(SRC))
 
