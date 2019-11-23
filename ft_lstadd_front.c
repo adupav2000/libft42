@@ -6,13 +6,13 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/09 13:09:58 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/09 13:50:12 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/11/23 17:08:43 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_front(t_list **alst, t_list *new)
+void    ft_lstadd_front(t_list **alst, t_list *new)
 {
     if (alst && new)
     {

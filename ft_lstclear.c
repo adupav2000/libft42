@@ -1,40 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/04 11:53:22 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/23 14:10:59 by adu-pavi         ###   ########.fr       */
+/*   Created: 2019/11/23 16:19:20 by adu-pavi          #+#    #+#             */
+/*   Updated: 2019/11/23 16:28:27 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
+void    ft_lstclear(t_list **lst, void (*del)(void *))
 {
-    unsigned int	i;
-	unsigned int	j;
-	unsigned int	res;
+    t_list *ptr;
 
-	i = 0;
-	while (dst[i] != '\0')
-		++i;
-	res = 0;
-	while (src[res] != '\0')
-		++res;
-	if (dstsize <= i)
-		res += dstsize;
-	else
-		res += i;
-	j = 0;
-	while (src[j] != '\0' && i + 1 < dstsize)
-	{
-		dst[i] = src[j];
-		i++;
-		j++;
-	}
-	dst[i] = '\0';
-	return (res);
+    ptr = *lst;
+    while (*lst)
+    {
+        ptr = (*lst)->next;
+        ft_lstdelone(ptr, del);
+        (*lst) = ptr;
+    }
 }

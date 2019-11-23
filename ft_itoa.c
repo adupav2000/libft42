@@ -31,30 +31,36 @@ char	*ft_itoa(int n)
 	if (stock < 0)
 	{
 		positivity = -1;
-		stock = -1 * stock;
+		stock = -stock;
 	}
-	while(stock > 0)
+	while(stock > 0 || diviseur > 0)
 	{
-		moment_val = stock/diviseur;
-		// printf("\n");
-		// printf("[moment_val = %d] -- [n = %d] -- [diviseur = %d]\n", moment_val, n, diviseur);
-		// printf("\n");
+		moment_val = (int)stock/diviseur;
 		if (moment_val > 0 || valid_null == 1)
 		{
 			if (valid_null == 0)
+			{
 				if (!(ret_val = (char *)malloc(ft_get_int_char_length(stock) + 1)))
-				{
 					return (0);
-					if (positivity == -1)
-						ret_val[i_ret_val++] = '-';		
-				}
-			valid_null = 1;
-			*(ret_val + i_ret_val++) = (char)((moment_val + 48));
+				if (positivity == -1)
+					ret_val[i_ret_val++] = '-';
+				valid_null = 1;
+			}
+			ret_val[i_ret_val++] = (char)((moment_val + 48));
+			// printf("%c\n", (char)(moment_val + 48));
+			stock -= (moment_val * diviseur);
+			moment_val = 0;
+			// printf("%c\n", ret_val[i_ret_val - 1]);
+			
 		}
-		stock -= (moment_val * diviseur * positivity);
-		// printf("[stock = %ld] -- [moment_val = %d] -- [diviseur = %d] -- [positivity = %d]\n", stock, moment_val, diviseur, positivity);
-		moment_val = 0;
 		diviseur = diviseur / 10;
 	}
+	if (i_ret_val == 0)
+	{
+		if (!(ret_val = (char *)malloc(2 + 1)))
+			return (0);
+		ret_val[i_ret_val++] = '0';
+	}
+	ret_val[i_ret_val] = '\0';
 	return (ret_val);
 }
