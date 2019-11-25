@@ -6,23 +6,20 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 16:30:37 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/23 16:35:35 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/11/24 14:02:45 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstitter(t_list *lst, void (*f)(void *))
+void ft_lstiter(t_list *lst, void (*f)(void *))
 {
-    t_list *ptr;
+    t_list	*next;
 
-    ptr = lst->next;
-    (*f)(lst);
-    while (lst->next)
-    {
-        ptr = lst->next;
-        (*f)(lst);
-        lst = ptr;
-    }
-    free(ptr);
+	while (lst)
+	{
+		next = lst->next;
+		f(lst);
+		lst = next;
+	}
 }
