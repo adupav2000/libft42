@@ -6,7 +6,7 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/11 18:53:40 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/23 14:21:45 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/11/28 12:12:16 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int main(int argc, char **argv)
     char *str1 = "hello how are you ?";
     char delimiter = ' ';
     char **ret = ft_split(str1, delimiter);
-printf("'%s'\n", ret[1]);
+    printf("%s", ret[2]);
     
     // int test_1 = 1234567;
     // char *buffer = "azerty";

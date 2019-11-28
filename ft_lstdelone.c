@@ -6,7 +6,7 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 18:46:58 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/25 16:13:32 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/11/28 14:03:50 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,6 @@
 void ft_lstdelone(t_list *lst, void (*del)(void*))
 {
         (*del)(lst->content);
-        ft_memdel((void **)lst);
+        free(lst);
+        lst = NULL;
 }

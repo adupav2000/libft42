@@ -6,7 +6,7 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 12:12:19 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/11 19:01:08 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/11/28 12:49:56 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,24 @@
 
 char * ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    unsigned int i;
-    char *s1;
-    
-    s1 = (char *)s;
-    i = 0;
-    while(s[i])
-    {
-        if (!(s1[i] = (char)malloc(sizeof((*f)(i, s1[i])) + 1)))
-            return (NULL);
-        s1[i] = (*f)(i, s1[i]);
-        i++;
-    }
-    s1[i] = 0;
-    return (s1);
+// calculate the length sum of all the function application 
+// malloc ret_val
+// apply it a second time
+// progressively save all the element on a ret_val array
+// unsigned int total_malloc;
+unsigned int i;
+char *ret_val;
+
+i = -1;
+ret_val = NULL;
+if (!(ret_val = malloc(sizeof(char)*(ft_strlen(s) + 1))))
+    return (0);
+i = 0;
+while (s[i])
+{
+    ret_val[i] = (*f)(i, s[i]);
+    i++;
+}
+ret_val[i] = '\0';
+return (ret_val);
 }

@@ -6,7 +6,7 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 16:13:27 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/25 16:11:17 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/11/28 13:24:35 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 t_list *ft_lstlast(t_list *lst)
 {
-    while (lst->next)
-        lst = lst->next;
-    return (lst);
+	if (lst)
+		while (lst->next)
+			lst = lst->next;
+	return (lst);
 }
