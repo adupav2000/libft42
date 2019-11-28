@@ -6,18 +6,18 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 12:11:55 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/19 15:10:55 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/11/28 17:26:15 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while(*(s + i))
-      i++;
-    return(i);
+	i = 0;
+	while (*(s + i))
+		i++;
+	return (i);
 }

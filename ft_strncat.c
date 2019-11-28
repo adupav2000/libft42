@@ -6,21 +6,21 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 12:12:34 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/04 12:12:37 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/11/28 19:15:15 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strncat(char *s1, const char *s2, size_t n)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-    int i;
-    int i2;
+	int i;
+	int i2;
 
-    i = 0;
-    i2 = 0;
-    while(*(s1+i++))  
-    while(*(s2 + i2) && (n - i2))
-        *(s1 + i++) = *(s2 + i2++);
-    return (s1);
+	i = 0;
+	i2 = 0;
+	while (*(s1+i++))
+	while (*(s2 + i2) && (n - i2))
+		*(s1 + i++) = *(s2 + i2++);
+	return (s1);
 }

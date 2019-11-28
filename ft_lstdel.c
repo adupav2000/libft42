@@ -6,15 +6,15 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 16:02:02 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/28 15:08:28 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/11/28 18:43:42 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_lstdel(t_list **alst, void(*del)(void*, size_t))
+void	ft_lstdel(t_list **alst, void(*del)(void*, size_t))
 {
-   t_list	*list;
+	t_list	*list;
 	t_list	*tmp;
 
 	list = *alst;

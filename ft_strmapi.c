@@ -6,32 +6,27 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 12:12:19 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/28 12:49:56 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/11/28 18:28:14 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char * ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-// calculate the length sum of all the function application 
-// malloc ret_val
-// apply it a second time
-// progressively save all the element on a ret_val array
-// unsigned int total_malloc;
-unsigned int i;
-char *ret_val;
+	unsigned int	i;
+	char			*ret_val;
 
-i = -1;
-ret_val = NULL;
-if (!(ret_val = malloc(sizeof(char)*(ft_strlen(s) + 1))))
-    return (0);
-i = 0;
-while (s[i])
-{
-    ret_val[i] = (*f)(i, s[i]);
-    i++;
-}
-ret_val[i] = '\0';
-return (ret_val);
+	i = -1;
+	ret_val = NULL;
+	if (!(ret_val = malloc(sizeof(char) * (ft_strlen(s) + 1))))
+		return (0);
+	i = 0;
+	while (s[i])
+	{
+		ret_val[i] = (*f)(i, s[i]);
+		i++;
+	}
+	ret_val[i] = '\0';
+	return (ret_val);
 }
