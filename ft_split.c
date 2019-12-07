@@ -6,7 +6,7 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 09:09:47 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/28 18:12:50 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/12/07 12:52:41 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	i2 = 0;
 	ret_val = NULL;
-	if (!(ret_val =  malloc(sizeof(char *) * ft_split_count_words(s, c))))
+	if (!(ret_val = malloc(sizeof(char *) * ft_split_count_words(s, c))))
 		return (0);
 	while (s[i] != 0)
 	{

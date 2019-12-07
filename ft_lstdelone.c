@@ -6,15 +6,15 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 18:46:58 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/28 14:03:50 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/12/07 13:26:45 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-        (*del)(lst->content);
-        free(lst);
-        lst = NULL;
+	(*del)(lst->content);
+	free(lst);
+	lst = NULL;
 }

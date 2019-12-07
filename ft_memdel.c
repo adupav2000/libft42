@@ -6,17 +6,17 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/24 12:54:49 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/24 13:50:33 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/12/07 13:21:25 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_memdel(void **ap)
+void	ft_memdel(void **ap)
 {
-    if(*ap)
-    {
-        free(*ap);
-        *ap = NULL;
-    }
+	if (*ap)
+	{
+		free(*ap);
+		*ap = NULL;
+	}
 }
