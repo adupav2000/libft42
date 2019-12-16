@@ -6,7 +6,7 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 16:09:30 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/12/07 13:25:34 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/12/11 15:12:50 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_lstsize(t_list *lst)
 	i = 0;
 	if (tmp)
 	{
-		while (tmp)
+		while (tmp->next)
 		{
 			tmp = tmp->next;
 			i++;

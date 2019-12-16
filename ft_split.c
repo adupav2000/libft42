@@ -6,7 +6,7 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 09:09:47 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/12/07 12:52:41 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/12/08 11:53:10 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,8 @@ char	**ft_split(char const *s, char c)
 	size_t	i;
 	size_t	i2;
 
+	if (!s)
+		return (0);
 	i = 0;
 	i2 = 0;
 	ret_val = NULL;

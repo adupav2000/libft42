@@ -6,7 +6,7 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 19:34:00 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/28 18:33:48 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/12/08 11:59:50 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	ft_putstr_fd(s, fd);
+	if (s)
+		ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }

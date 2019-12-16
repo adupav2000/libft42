@@ -18,8 +18,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	unsigned int	i;
 	unsigned int	i2;
 
+    if (!s1 || !s2)
+        return (0);
 	ret_val = 0;
-	if (NULL == (ret_val = malloc(ft_strlen(s1) + ft_strlen(s1) + 1)))
+    if (NULL == (ret_val = malloc(ft_strlen(s1) + ft_strlen(s1) + 1)))
 		return (NULL);
 	i2 = -1;
 	while (s1[++i2])
