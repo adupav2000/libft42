@@ -6,7 +6,7 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 11:53:22 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/28 18:04:06 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/12/17 17:14:26 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	unsigned int	i;
 	unsigned int	i2;
 
-    if (!s1 || !s2)
-        return (0);
+	if (!s1 || !s2)
+		return (0);
 	ret_val = 0;
-    if (NULL == (ret_val = malloc(ft_strlen(s1) + ft_strlen(s1) + 1)))
+	if (NULL == (ret_val = malloc(ft_strlen(s1) + ft_strlen(s1) + 1)))
 		return (NULL);
 	i2 = -1;
 	while (s1[++i2])

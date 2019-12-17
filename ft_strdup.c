@@ -6,7 +6,7 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 11:53:22 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/11/28 17:56:23 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/12/17 18:13:23 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 
 char	*ft_strdup(const char *s1)
 {
-	char *to_allocate;
+	char	*to_allocate;
+	int		i;
 
-	if (!(to_allocate = (char *)(malloc((strlen(s1) * sizeof(char))))))
+	i = ft_strlen(s1);
+	if (!(to_allocate = ft_strnew(i)))
 		return (0);
-	ft_memcpy(to_allocate, s1, ft_strlen(s1));
+	ft_memcpy(to_allocate, s1, i);
 	to_allocate[strlen(s1)] = '\0';
 	return (to_allocate);
 }

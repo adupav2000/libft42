@@ -6,7 +6,7 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 11:53:22 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/12/11 14:21:10 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/12/17 17:16:13 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	unsigned int	i;
 	unsigned int	i2;
 	unsigned int	lim;
-   
+
 	if (s1 == NULL)
 		return (NULL);
 	if (s1[0] == '\0')

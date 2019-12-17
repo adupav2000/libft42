@@ -6,7 +6,7 @@
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/09 12:47:20 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/12/11 14:47:36 by adu-pavi         ###   ########.fr       */
+/*   Updated: 2019/12/17 17:13:49 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_list	*ft_lstnew(void *content)
 	if (content)
 	{
 		if (!(ret_val->content = malloc(sizeof(content))))
-		return (NULL);
+			return (NULL);
 		ft_memcpy(ret_val->content, content, ft_strlen(content));
 	}
 	ret_val->next = NULL;
