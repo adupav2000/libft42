@@ -21,6 +21,6 @@ char	*ft_strdup(const char *s1)
 	if (!(to_allocate = ft_strnew(i)))
 		return (0);
 	ft_memcpy(to_allocate, s1, i);
-	to_allocate[strlen(s1)] = '\0';
+	to_allocate[ft_strlen(s1)] = '\0';
 	return (to_allocate);
 }
