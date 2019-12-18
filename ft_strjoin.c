@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: adu-pavi <adu-pavi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/04 11:53:22 by adu-pavi          #+#    #+#             */
-/*   Updated: 2019/12/17 17:14:26 by adu-pavi         ###   ########.fr       */
+/*   Created: 2019/12/18 12:13:12 by adu-pavi          #+#    #+#             */
+/*   Updated: 2019/12/18 12:13:24 by adu-pavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,19 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char			*ret_val;
+	char			*dest;
 	unsigned int	i;
-	unsigned int	i2;
 
-	if (!s1 || !s2)
-		return (0);
-	ret_val = 0;
-	if (NULL == (ret_val = malloc(ft_strlen(s1) + ft_strlen(s1) + 1)))
-		return (NULL);
-	i2 = -1;
-	while (s1[++i2])
-		ret_val[i2] = s1[i2];
 	i = 0;
-	while (s2[i])
-		ret_val[i2++] = s2[i++];
-	ret_val[i2] = '\0';
-	return (ret_val);
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	dest = (char*)malloc(sizeof(*dest) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (dest == NULL)
+		return (NULL);
+	while (*s1 != '\0')
+		dest[i++] = *s1++;
+	while (*s2 != '\0')
+		dest[i++] = *s2++;
+	dest[i] = '\0';
+	return (dest);
 }
