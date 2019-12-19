@@ -65,56 +65,11 @@ int main(int argc, char **argv)
     (void)argc; 
 
 
-    char *str1 = "hello how are you ?";
-    char delimiter = ' ';
-    char **ret = ft_split(str1, delimiter);
-    printf("%s", ret[2]);
+    char **ret = ft_split("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", ' ');
+    int i = 0;
+    while (i < 90)
+        printf("%s\n", ret[i++]);
     
-    // int test_1 = 1234567;
-    // char *buffer = "azerty";
-    // char *buffer1 = "  qsdfg";
-    // char *buffer2 = "WXCVBN";
-
-    // char *x = ft_strjoin(ft_strjoin(buffer, buffer1), buffer2);
-    // printf("'%s'\n", x);
-    // char *s1 = "my favorite animal is";
-    // char *s2 = " ";
-    // char *s3 = "the nyancat";
-    // char *res = ft_strjoin(ft_strjoin(s1, s2), s3);
-        // printf("res2 : -> "|%s"\n|", res2);
-
-    // char buff1[200] = "99999999999999999999999999";
-    // char buff2[200] = "-99999999999999999999999999";
-    // char buff3[200] = "\t\v\f\r\n \f-06050";
-    // char buff4[200] = "-2147483647 -1";
-    // // char buff2[200] = "hello my name is Alain";
-    // char con[200] = "doing some real testing";
-    
-    // strlcat(buff1, con, 50);
-    // ft_strlcat(buff2, con, 50);
-    // printf("%s\n", buff1);
-    // printf("%s\n", buff2);
-    // printf("buff1 - %d\n", ft_atoi(buff1));
-    // printf("buff1 - %d\n", atoi(buff1));
-    // printf("buff2 - %d\n", ft_atoi(buff2));
-    // printf("buff2 - %d\n", atoi(buff2));
-    
-    // printf("buff3 - %d\n", ft_atoi(buff3));
-    // printf("buff3 - %d\n", atoi(buff3));
-    
-    // printf("buff4 - %d\n", ft_atoi(buff4));
-    // printf("buff4 - %d\n", atoi(buff4));
-    // // char *str = "a aza - qdsfq\t\r\v\f\n";
-    // int i = 0;
-    // while (str[i])
-    // {
-    //     printf("'%d' - '%c' ||||\n", ft_isspace(str[i]), str[i]);
-    //     i++;
-    // }
-    // char *res = ft_strtrim("aaaaaaaaaaahello aaaddddddddd", "\n ad");
-    // char res2 = strtrim("\n\n\n\n\n\n\n\nhello \n\n\n\n\n\n\n\n", "\n ");
-    // printf("res : -> |%s|\n", res);
-
-    
+     
     return (0);
 }
